@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
-import bg from '../assets/Bg.jpg';
 import { useState } from 'react';
 
 const Home = () => {
@@ -34,20 +33,20 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>Writoor by @WholesomeBruh</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Animation ideas generator</h1>
+            <h1>HELLO, MATE</h1>
           </div>
           <div className="header-subtitle">
-            <h2>What do you want 🤨</h2>
+            <h2>Life’s good, you should get one.</h2>
           </div>
         </div>
         <div className="prompt-container">
           <textarea
-           placeholder="start typing here"
+           placeholder="Type your doubts...."
            className="prompt-box"
            value={userInput}
            onChange={onUserChangedText} 
@@ -58,19 +57,22 @@ const callGenerateEndpoint = async () => {
               onClick={callGenerateEndpoint}
             >
               <div className="generate">
-              {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
+              {isGenerating ? <span class="loader"></span> : <p>Answer</p>}
               </div>
             </a>
           </div>
           {apiOutput && (
           <div className="output">
-            <div className="output-header-container">
+            <div className='output-header-container'>
               <div className="output-header">
-                <h3>Output</h3>
+                <h3>Solution:</h3>
               </div>
-            </div>
+            </div>  
           <div className="output-content">
             <p>{apiOutput}</p>
+          </div>
+          <div>
+          <h3>Provided by <a href="https://twitter.com/WholesomeBruh" target= "_blank">@WholesomeBruh 😎</a></h3>
           </div>
         </div>
         )}
