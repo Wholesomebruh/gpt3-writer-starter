@@ -32,6 +32,7 @@ const callGenerateEndpoint = async () => {
   }
   return (
     <div className="root">
+    <script src="https://app.embed.im/snow.js" defer></script>
       <Head>
         <title>Writoor by @WholesomeBruh</title>
       </Head>
