@@ -5,7 +5,9 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix = "";
+
+var basePromptPrefix = "";
+
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -19,7 +21,11 @@ const generateAction = async (req, res) => {
   
   const basePromptOutput = baseCompletion.data.choices.pop();
 
+   var op=basePromptOutput.text.trim();
+console.log("trimmed text:",op);
   res.status(200).json({ output: basePromptOutput });
+  basePromptPrefix+=op+"";
+  console.log("Prefix:",basePromptPrefix);
 };
 
 export default generateAction;
