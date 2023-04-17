@@ -32,11 +32,10 @@ const callGenerateEndpoint = async () => {
   }
   return (
     <div className="root">
-    <script src="https://app.embed.im/snow.js" defer></script>
+    
       <Head>
         <title>Writoor by @WholesomeBruh</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6366457075080576"
-     crossorigin="anonymous"></script>
+    
       </Head>
       <div className="container">
         <div className="header">
